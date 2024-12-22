@@ -63,7 +63,7 @@ export default function Home() {
           {/* Botones */}
           <div className="flex flex-col sm:flex-row gap-9 mt-6">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=braiana.rodriguez.16@gmail.com&su=Consulta&body=Hola, tengo una duda sobre..."
+              href="mailto:braiana.rodriguez.16@gmail.com?Subject=Hola,%20tengo%20una%20consulta%20sobre..."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -75,6 +75,7 @@ export default function Home() {
                 <IconDumb Icon={MdMessage} size={30} color="white" />
               </ButtonDumb>
             </a>
+
             <a
               href="/pdf/CV_Joselin_Rodriguez.pdf" // Ruta al archivo en la carpeta public
               download="Braiana_Rodriguez_CV.pdf" // Nombre del archivo al descargar
