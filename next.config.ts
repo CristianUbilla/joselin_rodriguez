@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  output: "export"
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  basePath: "/frontend",
+  output: "export",
+  reactStrictMode: true,
 };
 
-export default nextConfig;
 module.exports = nextConfig;
