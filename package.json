@@ -2,7 +2,7 @@
   "name": "joselin-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://CristianUbilla.github.io/joselin_rodriguez/",
+  "homepage": "https://CristianUbilla.github.io/joselin_rodriguez/page.tsx",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
