@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@nextui-org/react";
+import { Image, Link } from "@nextui-org/react";
 import ButtonDumb from "@/ui/components/dumbs/button";
 import IconDumb from "@/ui/components/dumbs/icon";
 
@@ -75,15 +75,23 @@ export default function Home() {
                 <IconDumb Icon={MdMessage} size={30} color="white" />
               </ButtonDumb>
             </a>
-
-            <a
-              href="/pdf/CV_Joselin_Rodriguez.pdf" // Ruta al archivo en la carpeta public
-              download="Braiana_Rodriguez_CV.pdf" // Nombre del archivo al descargar
-            >
-              <ButtonDumb label="Descargar CV" color="danger" variant="solid">
-                <IconDumb Icon={IoMdDownload} size={25} />
-              </ButtonDumb>
-            </a>
+            <Link href="/pdf/CV_Joselin_Rodriguez.pdf">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  const link = document.createElement("a");
+                  link.href = "/pdf/CV_Joselin_Rodriguez.pdf";
+                  link.download = "Joselin_Rodriguez_CV.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <ButtonDumb label="Descargar CV" color="danger" variant="solid">
+                  <IconDumb Icon={IoMdDownload} size={25} />
+                </ButtonDumb>
+              </a>
+            </Link>
           </div>
         </main>
         {/* Botones */}
