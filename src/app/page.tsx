@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, Link } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import ButtonDumb from "@/ui/components/dumbs/button";
 import IconDumb from "@/ui/components/dumbs/icon";
 
@@ -66,6 +66,7 @@ export default function Home() {
               href="mailto:braiana.rodriguez.16@gmail.com?Subject=Hola,%20tengo%20una%20consulta%20sobre..."
               target="_blank"
               rel="noopener noreferrer"
+              className="w-[100%]"
             >
               <ButtonDumb
                 label="¿Dudas? ¡Envíame un mensaje!"
@@ -75,23 +76,14 @@ export default function Home() {
                 <IconDumb Icon={MdMessage} size={30} color="white" />
               </ButtonDumb>
             </a>
-            <Link href="/pdf/CV_Joselin_Rodriguez.pdf">
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  const link = document.createElement("a");
-                  link.href = "/pdf/CV_Joselin_Rodriguez.pdf";
-                  link.download = "Joselin_Rodriguez_CV.pdf";
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-              >
-                <ButtonDumb label="Descargar CV" color="danger" variant="solid">
-                  <IconDumb Icon={IoMdDownload} size={25} />
-                </ButtonDumb>
-              </a>
-            </Link>
+
+            <a
+              href="/pdf/CV_Joselin_Rodriguez.pdf"
+              download="Joselin_Rodriguez_CV.pdf"
+              className="bg-danger text-white px-4 py-2 rounded-lg inline-flex items-center justify-center hover:bg-danger-dark transition w-[100%]"
+            >
+              Descargar CV
+            </a>
           </div>
         </main>
         {/* Botones */}

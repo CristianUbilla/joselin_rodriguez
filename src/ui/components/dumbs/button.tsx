@@ -32,8 +32,13 @@ export default function ButtonDumb({
   children,
 }: props) {
   return (
-    <Button color={color} variant={variant} onPress={onPress}>
-      <div className="flex items-center gap-2 w-[300px] justify-center">
+    <Button
+      color={color}
+      variant={variant}
+      onPress={onPress}
+      className="w-full" // Clase Tailwind para ancho completo
+    >
+      <div className="flex items-center gap-2 w-full justify-center">
         {children}
         {label}
       </div>
