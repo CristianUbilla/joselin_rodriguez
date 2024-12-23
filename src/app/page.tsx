@@ -10,7 +10,6 @@ import { MdMessage } from "react-icons/md";
 import "@ui/anim/cardAnimation.css";
 import PopoverDumb from "@/ui/components/dumbs/popover";
 import CardDumb from "@/ui/components/dumbs/card";
-import { IoMdDownload } from "react-icons/io";
 
 export default function Home() {
   return (
