@@ -1,11 +1,11 @@
 "use client";
 
 import { Image } from "@nextui-org/react";
-import ButtonDumb from "@/ui/components/dumbs/button";
+// import ButtonDumb from "@/ui/components/dumbs/button";
 import IconDumb from "@/ui/components/dumbs/icon";
 
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
+// import { MdMessage } from "react-icons/md";
 
 import "@ui/anim/cardAnimation.css";
 import PopoverDumb from "@/ui/components/dumbs/popover";
@@ -62,18 +62,12 @@ export default function Home() {
           {/* Botones */}
           <div className="flex flex-col sm:flex-row gap-9 mt-6">
             <a
+              className="bg-danger text-white px-4 py-2 rounded-lg inline-flex items-center justify-center hover:bg-danger-dark transition w-[100%]"
               href="mailto:braiana.rodriguez.16@gmail.com?Subject=Hola,%20tengo%20una%20consulta%20sobre..."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[100%]"
             >
-              <ButtonDumb
-                label="¿Dudas? ¡Envíame un mensaje!"
-                color="danger"
-                variant="solid"
-              >
-                <IconDumb Icon={MdMessage} size={30} color="white" />
-              </ButtonDumb>
+              ¿Dudas? ¡Contáctame!
             </a>
 
             <a
